@@ -25,6 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import SplashScreen from './screen/onboarding/splashScreen';
+import MainNavigation from './navigation/mainNavigation';
+import Login from './screen/login/index';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -33,16 +35,13 @@ type SectionProps = PropsWithChildren<{
 
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  
 
   return (
-    <SafeAreaView >
-     <SplashScreen /> 
-    </SafeAreaView>
+    < >
+     <MainNavigation /> 
+    </>
   );
 }
 
